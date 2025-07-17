@@ -132,7 +132,7 @@
                 <input type="file" id="fileInput" class="file-input" accept="image/*" multiple>
             </div>
 
-            <div class="controls-panel">
+<div class="controls-panel">
                 <div class="quality-control">
                     <label class="quality-label">压缩质量</label>
                     <input type="range" id="qualitySlider" class="quality-slider" min="0.1" max="1" step="0.1" value="0.8">
@@ -146,28 +146,6 @@
                         <option value="image/png">PNG</option>
                         <option value="image/webp">WebP</option>
                     </select>
-                </div>
-                
-                <div class="watermark-control">
-                    <label class="quality-label">水印文字</label>
-                    <input type="text" id="watermarkText" class="watermark-input" placeholder="输入水印文字" maxlength="50">
-                </div>
-                
-                <div class="watermark-position">
-                    <label class="quality-label">水印位置</label>
-                    <select id="watermarkPosition" class="quality-slider">
-                        <option value="bottom-right">右下角</option>
-                        <option value="bottom-left">左下角</option>
-                        <option value="top-right">右上角</option>
-                        <option value="top-left">左上角</option>
-                        <option value="center">居中</option>
-                    </select>
-                </div>
-                
-                <div class="watermark-opacity">
-                    <label class="quality-label">水印透明度</label>
-                    <input type="range" id="watermarkOpacity" class="quality-slider" min="0.1" max="1" step="0.1" value="0.7">
-                    <div class="opacity-value">70%</div>
                 </div>
             </div>
 
@@ -252,10 +230,6 @@
         const qualitySlider = document.getElementById('qualitySlider');
         const qualityValue = document.querySelector('.quality-value');
         const formatSelect = document.getElementById('formatSelect');
-        const watermarkText = document.getElementById('watermarkText');
-        const watermarkPosition = document.getElementById('watermarkPosition');
-        const watermarkOpacity = document.getElementById('watermarkOpacity');
-        const opacityValue = document.querySelector('.opacity-value');
         const loading = document.getElementById('loading');
         const previewSection = document.getElementById('previewSection');
         const originalImage = document.getElementById('originalImage');
@@ -263,7 +237,7 @@
         const originalInfo = document.getElementById('originalInfo');
         const compressedInfo = document.getElementById('compressedInfo');
         const downloadBtn = document.getElementById('downloadBtn');
-        const uploadArea = document.querySelector('.uploadArea');
+        const uploadArea = document.querySelector('.upload-area');
 
         let currentFile = null;
 
